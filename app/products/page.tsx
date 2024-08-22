@@ -101,7 +101,7 @@ export default function Page() {
 
     return (
         <div className={styles.container}>
-            <table className={styles.table}>
+            <table>
                 <thead>
                     <tr>
                         <th className={styles.td}>STT</th>
@@ -118,17 +118,19 @@ export default function Page() {
                             <td className={styles.td}>{index + 1}</td>
                             <td className={styles.td}>{btn.productName}</td>
                             <td className={styles.td}>
-                                <img src={btn.image} alt={btn.productName} width={100} height={100} />
+                                <img src={btn.image} alt={btn.productName} style={{width:'100px',height:'80px'}} />
                             </td>
                             <td className={styles.td}>{btn.price}</td>
                             <td className={styles.td}>{btn.quantity}</td>
                             <td className={styles.td}>
+                                <div className={styles.tdButton}>
                                 <button onClick={() => handleDelete(btn.id)} className={styles.buttonDelete}>
                                     Xóa
                                 </button>
                                 <button className={styles.buttonEdit} onClick={() => handleEdit(btn.id)}>
                                     Sửa
                                 </button>
+                                </div>
                             </td>
                         </tr>
                     ))}
@@ -158,6 +160,7 @@ export default function Page() {
                     {typeSubmit === 'add' ? 'Thêm mới' : 'Cập nhật'}
                 </button>
             </form>
+            
         </div>
     );
 }
