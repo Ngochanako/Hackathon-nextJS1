@@ -103,7 +103,7 @@ export default function Page() {
         <div className={styles.container}>
             <table className={styles.table}>
                 <thead>
-                    <tr className={styles.td}>
+                    <tr>
                         <th className={styles.td}>STT</th>
                         <th className={styles.td}>Tên sản phẩm</th>
                         <th className={styles.td}>Hình ảnh</th>
